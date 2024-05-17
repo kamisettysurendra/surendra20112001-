@@ -9,7 +9,7 @@ phases:
               # Clone the GitHub repository, build, and deploy
 
               # Clone the repository to a temporary directory
-              sudo git clone https://github.com/kamisettysurendra/surendra20112001-/tmp/deployment
+              sudo git clone https://github.com/kamisettysurendra/surendra20112001- /tmp/deployment
 
               # Copy  the built files to the web server directory
               ls /tmp/deployment/
