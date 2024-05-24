@@ -13,7 +13,7 @@ phases:
 
               # Copy  the built files to the web server directory
               ls /tmp/deployment/
-              sudo cp -r /tmp/deployment/* /var/www/html
+              sudo cp -r /tmp/deployment/. /var/www/html
               
               # Clean up the temporary directory
               sudo rm -rf /tmp/deployment
