@@ -25,6 +25,10 @@ artifacts:
     files:
         - assets/.
         - css
+        - fonts
+        - images
+        - js
+        - scripts
         - scripts/install_dependencies
         - scripts/start_server
         - scripts/stop_server
