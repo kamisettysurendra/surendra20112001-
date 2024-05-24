@@ -25,9 +25,57 @@ artifacts:
     files:
         - assets/.
         - css
+        - css/bootstrap-icons.css
+        - css/bootstrap.min.css
+        - css/owl.carousel.min.css
+        - css/owl.theme.default.min.css
+        - css/tooplate-gotto-job.css
         - fonts
+        - fonts/bootstrap-icons.woff
+        - fonts/bootstrap-icons.woff2
         - images
+        - images/avatar/blond-man-happy-expression.jpg
+        - images/avatar/medium-shot-smiley-senior-man.jpg
+        - images/avatar/portrait-beautiful-young-woman.jpg
+        - images/avatar/portrait-charming-middle-aged-attractive-woman-with-blonde-hair.jpg
+        - images/avatar/university-study-abroad-lifestyle-concept.jpg
+        - images/jobs/coding-man.jpg
+        - images/jobs/it-professional-works-startup-project.jpg
+        - images/jobs/logo-designer-working-computer-desktop.jpg
+        - images/jobs/marketing-assistant.jpg
+        - images/jobs/paper-analysis.jpg
+        - images/jobs/portrait-woman-customer-service-worker.jpg
+        - images/jobs/pretty-blogger-posing-cozy-apartment.jpg
+        - images/jobs/sound-engineer-working-studio-with-equipment.jpg
+        - images/jobs/young-woman-teaching-english-lessons.jpg
+        - images/logos/apple.png
+        - images/logos/creative-market.png
+        - images/logos/dropbox.png
+        - images/logos/envato.png
+        - images/logos/google.png
+        - images/logos/meta.png
+        - images/logos/microsoft.png
+        - images/logos/paypal.png
+        - images/logos/salesforce.png
+        - images/logos/shopify.png
+        - images/logos/slack.png
+        - images/logos/soundcloud.png
+        - images/logos/spotify.png
+        - images/logos/twitter.png
+        - images/logos/yelp.png
+        - images/site-header/close-up-young-business-team-working.jpg
+        - images/site-header/horizontal-shot-happy-mixed-race-females.jpg
+        - images/site-header/left-quote.png
+        - images/site-header/logo.png
+        - images/site-header/millennial-group-young-businesspeople.jpg
+        - images/site-header/people-working-as-team-company.jpg
+        - images/site-header/professional-asian-businesswoman-gray-blazer.jpg
         - js
+        - js/bootstrap.min.js
+        - js/counter.js
+        - js/custom.js
+        - js/jquery.min.js
+        - js/owl.carousel.min.js
         - scripts
         - scripts/install_dependencies
         - scripts/start_server
