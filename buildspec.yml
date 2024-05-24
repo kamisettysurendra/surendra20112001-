@@ -1,4 +1,5 @@
 version: 0.2
+
 phases: 
     build:
         commands:
@@ -6,17 +7,17 @@ phases:
             - |
               # Deployment Script
               # Clone the GitHub repository, build, and deploy
- 
+
               # Clone the repository to a temporary directory
               sudo git clone https://github.com/kamisettysurendra/surendra20112001- /tmp/deployment
- 
-              # List files in the temporary directory to verify the clone
+
+              # Copy  the built files to the web server directory
               ls /tmp/deployment/
-              
-              # Copy all files, including hidden ones, to the web server directory
               sudo cp -r /tmp/deployment/. /var/www/html
               
- 
+              # Clean up the temporary directory
+              sudo rm -rf /tmp/deployment
+
     post_build:
         commands:
             - echo "Post-build phase"
