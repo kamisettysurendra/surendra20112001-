@@ -7,7 +7,10 @@ phases:
             - |
               # Deployment Script
               # Clone the GitHub repository, build, and deploy
-
+              
+              cd /tmp/
+              sudo mkdir -p deployment
+              cd deployment
               # Clone the repository to a temporary directory
               sudo git clone https://github.com/kamisettysurendra/surendra20112001- /tmp/deployment
 
