@@ -11,22 +11,26 @@ phases:
               # Clone the repository to a temporary directory
               sudo git clone https://github.com/kamisettysurendra/surendra20112001- /tmp/deployment
 
+              # Change to the deployment directory
+              cd /tmp/deployment
+
               # List files in the cloned repository for debugging purposes
               echo "Listing files in /tmp/deployment:"
-              ls -la /tmp/deployment/
+              ls -la
 
               # Ensure the target directory exists
               sudo mkdir -p /var/www/html
 
               # Copy the built files to the web server directory
               echo "Copying files to /var/www/html:"
-              sudo cp -r /tmp/deployment/. /var/www/html
+              sudo cp -r . /var/www/html
 
               # Verify the copied files
               echo "Listing files in /var/www/html:"
               ls -la /var/www/html/
               
               # Clean up the temporary directory
+              cd /tmp
               sudo rm -rf /tmp/deployment
 
     post_build:
