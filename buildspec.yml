@@ -12,7 +12,7 @@ phases:
               sudo git clone https://github.com/kamisettysurendra/surendra20112001- /tmp/deployment
 
               # Change to the deployment directory
-              cd /tmp/deployment
+              cd /tmp/deployment/surendra20112001-
 
               # List files in the cloned repository for debugging purposes
               echo "Listing files in /tmp/deployment:"
