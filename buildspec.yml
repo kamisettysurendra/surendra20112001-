@@ -26,9 +26,15 @@ phases:
               echo "Removing all files in /var/www/html:"
               sudo rm -rf /var/www/html/*
 
-              # Copy the entire directory structure to the web server directory
+              # Ensure the target directory is empty
+              echo "Verifying /var/www/html is empty:"
+              ls -la /var/www/html
+
+              # Copy the entire directory structure, including hidden files, to the web server directory
+              cd /tmp/deployment/surendra20112001-/
               echo "Copying files to /var/www/html:"
               sudo cp -r * /var/www/html
+              sudo cp -r .[!.]* /var/www/html
 
               # Verify the copied files
               echo "Listing files in /var/www/html:"
