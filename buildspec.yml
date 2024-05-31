@@ -22,7 +22,11 @@ phases:
               # Ensure the target directory exists
               sudo mkdir -p /var/www/html
 
-              # Copy all files (including hidden ones) to the web server directory
+              # Remove all existing files and directories in /var/www/html
+              echo "Removing all files in /var/www/html:"
+              sudo rm -rf /var/www/html/*
+
+              # Copy the entire directory structure to the web server directory
               echo "Copying files to /var/www/html:"
               sudo cp -r * /var/www/html
 
