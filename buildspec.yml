@@ -6,34 +6,31 @@ phases:
             - echo "Build phase"
             - |
               # Deployment Script
-              # Clone the GitHub repository, build, and deploy
-              
-              cd /tmp/
-              sudo mkdir -p deployment
-              cd deployment
-              # Clone the repository to a temporary directory
+              # Create /tmp/deployment directory
+              sudo mkdir -p /tmp/deployment
+
+              # Clone the repository to /tmp/deployment
               sudo git clone https://github.com/kamisettysurendra/surendra20112001- /tmp/deployment
 
-              # Change to the deployment directory
-              cd /tmp/deployment/surendra20112001-/
+              # Change to the cloned repository directory
+              cd /tmp/deployment/surendra20112001-
 
               # List files in the cloned repository for debugging purposes
-              echo "Listing files in /tmp/deployment:"
+              echo "Listing files in /tmp/deployment/surendra20112001-:"
               ls -la
 
               # Ensure the target directory exists
               sudo mkdir -p /var/www/html
 
-              # Copy the built files to the web server directory
+              # Copy all files (including hidden ones) to the web server directory
               echo "Copying files to /var/www/html:"
               sudo cp -r . /var/www/html
 
               # Verify the copied files
               echo "Listing files in /var/www/html:"
-              ls -la /var/www/html/
+              ls -la /var/www/html
               
               # Clean up the temporary directory
-              cd /tmp
               sudo rm -rf /tmp/deployment
 
     post_build:
@@ -42,65 +39,12 @@ phases:
 
 artifacts:
     files:
-        - assets/.
-        - css
-        - css/bootstrap-icons.css
-        - css/bootstrap.min.css
-        - css/owl.carousel.min.css
-        - css/owl.theme.default.min.css
-        - css/tooplate-gotto-job.css
-        - fonts
-        - fonts/bootstrap-icons.woff
-        - fonts/bootstrap-icons.woff2
-        - images
-        - images/avatar/blond-man-happy-expression.jpg
-        - images/avatar/medium-shot-smiley-senior-man.jpg
-        - images/avatar/portrait-beautiful-young-woman.jpg
-        - images/avatar/portrait-charming-middle-aged-attractive-woman-with-blonde-hair.jpg
-        - images/avatar/university-study-abroad-lifestyle-concept.jpg
-        - images/jobs/coding-man.jpg
-        - images/jobs/it-professional-works-startup-project.jpg
-        - images/jobs/logo-designer-working-computer-desktop.jpg
-        - images/jobs/marketing-assistant.jpg
-        - images/jobs/paper-analysis.jpg
-        - images/jobs/portrait-woman-customer-service-worker.jpg
-        - images/jobs/pretty-blogger-posing-cozy-apartment.jpg
-        - images/jobs/sound-engineer-working-studio-with-equipment.jpg
-        - images/jobs/young-woman-teaching-english-lessons.jpg
-        - images/logos/apple.png
-        - images/logos/creative-market.png
-        - images/logos/dropbox.png
-        - images/logos/envato.png
-        - images/logos/google.png
-        - images/logos/meta.png
-        - images/logos/microsoft.png
-        - images/logos/paypal.png
-        - images/logos/salesforce.png
-        - images/logos/shopify.png
-        - images/logos/slack.png
-        - images/logos/soundcloud.png
-        - images/logos/spotify.png
-        - images/logos/twitter.png
-        - images/logos/yelp.png
-        - images/site-header/close-up-young-business-team-working.jpg
-        - images/site-header/horizontal-shot-happy-mixed-race-females.jpg
-        - images/site-header/left-quote.png
-        - images/site-header/logo.png
-        - images/site-header/millennial-group-young-businesspeople.jpg
-        - images/site-header/people-working-as-team-company.jpg
-        - images/site-header/professional-asian-businesswoman-gray-blazer.jpg
-        - js
-        - js/bootstrap.min.js
-        - js/counter.js
-        - js/custom.js
-        - js/jquery.min.js
-        - js/owl.carousel.min.js
-        - scripts
-        - scripts/install_dependencies
-        - scripts/start_server
-        - scripts/stop_server
+        - assets/**
+        - css/**/*
+        - fonts/**/*
+        - images/**/*
+        - js/**/*
+        - scripts/**/*
         - index.html
         - appspec.yml  
     discard-paths: yes
-        
-      
