@@ -24,7 +24,7 @@ phases:
 
               # Copy all files (including hidden ones) to the web server directory
               echo "Copying files to /var/www/html:"
-              sudo cp -r . /var/www/html
+              sudo cp -r * /var/www/html
 
               # Verify the copied files
               echo "Listing files in /var/www/html:"
